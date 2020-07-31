@@ -20,7 +20,7 @@
 			//Never delete this line!
 			parent::ApplyChanges();
 
-		$this->RegisterMessage($this->ReadPropertyInteger("SourceVariable")/, 10603  /* VM_UPDATE */);
+		$this->RegisterMessage($this->ReadPropertyInteger("SourceVariable"), 10603  /* VM_UPDATE */);
 		}
 
 		private function Calc()
