@@ -33,7 +33,7 @@
 			$index  = $buffer[0]+1;													// Index einlesen und um 1 erhöhen
 			if ($index > $this->ReadPropertyInteger("amount")) $index = 1;			// Überlauf
 			$buffer[0] = 0;
-			$buffer[$index] = json_decode($Data);			// neuen Messwert ins Array eintragen
+			$buffer[$index] = $Data[0];			// neuen Messwert ins Array eintragen
 			$average = array_sum($buffer) / $this->ReadPropertyInteger("amount");	// Mittelwert berechnen
 			$buffer[0] = $index;                                        // neuen Index ins Array eintragen
 			$this->SetBuffer("DataBuffer", implode("|",$buffer));					// im Infobereich der Variablen, das Array ablegen
