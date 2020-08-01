@@ -30,8 +30,10 @@
 			$buffer = explode("|",$this->GetBuffer("DataBuffer")); 
 			$index = $this->GetBuffer("Index"); 
 			if(!isset($index)){
+				$index = 0;
+			}
 				if ($index >= $this->ReadPropertyInteger("amount")) $index = 0;			// Überlauf
-				$buffer[$index] = floatval(str_replace(',', '.',$Data[0]));			// neuen Messwert ins Array eintragen
+				$buffer[$index] = floatval(str_replace(',' , '.',$Data[0]));			// neuen Messwert ins Array eintragen
 				$average = array_sum($buffer) / count($buffer);	// Mittelwert berechnen
 				$this->SetBuffer("DataBuffer", implode("|",$buffer));					// im Infobereich der Variablen, das Array ablegen
 				$this->SetBuffer("Index", $index + 1);
@@ -39,6 +41,6 @@
 				$this->SendDebug("Index",$index,0);
 				$this->SendDebug("Average",$average,0);
 				SetValue($this->ReadPropertyInteger("TargetVariable"),$average);      
-			}
+
 		}
 	}
