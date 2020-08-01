@@ -28,13 +28,12 @@
 		public function MessageSink($TimeStamp, $SenderID, $Message, $Data) 
 		{
 			$buffer = explode("|",$this->GetBuffer("DataBuffer")); 
-			$index = $this->GetBuffer("Index") + 1; 
-			//IPS_LogMessage("MessageSink", "Message from SenderID ".$SenderID." with Message ".$Message."\r\n Data: ".print_r($Data, true));
+			$index = $this->GetBuffer("Index"); 
 			if ($index >= $this->ReadPropertyInteger("amount")) $index = 0;			// Überlauf
-			$this->SetBuffer("Index", $index);
 			$buffer[$index] = floatval(str_replace(',', '.',$Data[0]));			// neuen Messwert ins Array eintragen
 			$average = array_sum($buffer) / count($buffer);	// Mittelwert berechnen
 			$this->SetBuffer("DataBuffer", implode("|",$buffer));					// im Infobereich der Variablen, das Array ablegen
+			$this->SetBuffer("Index", $index + 1);
 			$this->SendDebug("Buffer",$this->GetBuffer("DataBuffer"),0);
 			$this->SendDebug("Index",$index,0);
 			$this->SendDebug("Average",$average,0);
