@@ -27,7 +27,7 @@
 
 		public function MessageSink($TimeStamp, $SenderID, $Message, $Data) 
 		{
-			$buffer = explode("|",$this->GetBuffer("DataBuffer")); 
+			$buffer = explode("|",str_replace(',' , '.',$this->GetBuffer("DataBuffer"))); 
 			$index = $this->GetBuffer("Index"); 
 			if($index == ""){
 				$index = 0;
