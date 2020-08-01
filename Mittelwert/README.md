@@ -8,12 +8,11 @@ Beschreibung des Moduls.
 3. [Software-Installation](#3-software-installation)
 4. [Einrichten der Instanzen in IP-Symcon](#4-einrichten-der-instanzen-in-ip-symcon)
 5. [Statusvariablen und Profile](#5-statusvariablen-und-profile)
-6. [WebFront](#6-webfront)
-7. [PHP-Befehlsreferenz](#7-php-befehlsreferenz)
+
 
 ### 1. Funktionsumfang
 
-*
+* Berrechnet den Mittelwert einer Interger oder Float Variable und speichert diesen unter einer weiteren Floatvariable ab.
 
 ### 2. Vorraussetzungen
 
@@ -21,8 +20,8 @@ Beschreibung des Moduls.
 
 ### 3. Software-Installation
 
-* Über den Module Store das 'Mittelwert'-Modul installieren.
-* Alternativ über das Module Control folgende URL hinzufügen
+* Über das Module Control folgende URL hinzufügen: 
+https://github.com/IPSAttain/Misc
 
 ### 4. Einrichten der Instanzen in IP-Symcon
 
@@ -33,35 +32,10 @@ __Konfigurationsseite__:
 
 Name     | Beschreibung
 -------- | ------------------
-         |
-         |
+ Quell Variable        | Variable die überwacht werden soll
+ Ziel Variable        | In diese wird das Ergebnis abgelegt
+ Werteanzahl         | Anzahl der Werte die zur Berrechnung berücksichtigt werden sollen
 
 ### 5. Statusvariablen und Profile
 
-Die Statusvariablen/Kategorien werden automatisch angelegt. Das Löschen einzelner kann zu Fehlfunktionen führen.
-
-#### Statusvariablen
-
-Name   | Typ     | Beschreibung
------- | ------- | ------------
-       |         |
-       |         |
-
-#### Profile
-
-Name   | Typ
------- | -------
-       |
-       |
-
-### 6. WebFront
-
-Die Funktionalität, die das Modul im WebFront bietet.
-
-### 7. PHP-Befehlsreferenz
-
-`boolean ATN_BeispielFunktion(integer $InstanzID);`
-Erklärung der Funktion.
-
-Beispiel:
-`ATN_BeispielFunktion(12345);`
+keine
