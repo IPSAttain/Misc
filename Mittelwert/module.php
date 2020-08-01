@@ -34,7 +34,7 @@
 			//IPS_LogMessage("MessageSink", "Message from SenderID ".$SenderID." with Message ".$Message."\r\n Data: ".print_r($Data, true));
 			if ($index >= $this->ReadPropertyInteger("amount")) $index = 0;			// Überlauf
 			$this->SetBuffer("Index", $index);
-			$buffer[$index] = $Data[0];			// neuen Messwert ins Array eintragen
+			$buffer[$index] = str_replace('.', ',',$Data[0]);			// neuen Messwert ins Array eintragen
 			$average = array_sum($buffer) / $this->ReadPropertyInteger("amount");	// Mittelwert berechnen
 			$this->SetBuffer("DataBuffer", implode("|",$buffer));					// im Infobereich der Variablen, das Array ablegen
 			$this->SendDebug("Average",$average,0);
