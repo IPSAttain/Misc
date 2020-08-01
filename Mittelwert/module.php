@@ -29,7 +29,7 @@
 		{
 			$buffer = explode("|",$this->GetBuffer("DataBuffer")); 
 			$index = $this->GetBuffer("Index"); 
-			if(!isset($index)){
+			if($index == ""){
 				$index = 0;
 			}
 				if ($index >= $this->ReadPropertyInteger("amount")) $index = 0;			// Überlauf
