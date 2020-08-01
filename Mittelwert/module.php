@@ -29,6 +29,7 @@
 		{
 			$buffer = explode("|",$this->GetBuffer("DataBuffer")); 
 			$this->SendDebug("Buffer",$this->GetBuffer("DataBuffer"),0);
+			IPS_LogMessage("MessageSink", "Message from SenderID ".$SenderID." with Message ".$Message."\r\n Data: ".print_r($Data, true));
 			$index  = $buffer[0]+1;													// Index einlesen und um 1 erhöhen
 			if ($index > $this->ReadPropertyInteger("amount")) $index = 1;			// Überlauf
 			$buffer[0] = 0;
@@ -36,6 +37,7 @@
 			$average = array_sum($buffer) / $this->ReadPropertyInteger("amount");	// Mittelwert berechnen
 			$buffer[0] = $index;                                        // neuen Index ins Array eintragen
 			$this->SetBuffer("DataBuffer", implode("|",$buffer));					// im Infobereich der Variablen, das Array ablegen
+			$this->SendDebug("Average",$average,0);
 			SetValue($this->ReadPropertyInteger("TargetVariable"),$average);      
 		}
 	}
