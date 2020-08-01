@@ -25,13 +25,13 @@
 		$this->RegisterMessage($this->ReadPropertyInteger("SourceVariable"), 10603  /* VM_UPDATE */);
 		}
 
-		private function Calc()
+		public function MessageSink($TimeStamp, $SenderID, $Message, $Data) 
 		{
 			$buffer = explode("|",$this->GetBuffer("DataBuffer")); 
 			$index  = $buffer[0]+1;													// Index einlesen und um 1 erhöhen
 			if ($index > $this->ReadPropertyInteger("amount")) $index = 1;			// Überlauf
 			$buffer[0] = 0;
-			$buffer[$index] = $this->ReadPropertyInteger("SourceVariable");			// neuen Messwert ins Array eintragen
+			$buffer[$index] = $Data;			// neuen Messwert ins Array eintragen
 			$average = array_sum($buffer) / $this->ReadPropertyInteger("amount");	// Mittelwert berechnen
 			$buffer[0] = $index;                                        // neuen Index ins Array eintragen
 			$this->SetBuffer("DataBuffer", implode("|",$buffer));					// im Infobereich der Variablen, das Array ablegen
