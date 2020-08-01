@@ -28,6 +28,7 @@
 		public function MessageSink($TimeStamp, $SenderID, $Message, $Data) 
 		{
 			$buffer = explode("|",$this->GetBuffer("DataBuffer")); 
+			$this->SendDebug("Buffer",$this->GetBuffer("DataBuffer"),0);
 			$index  = $buffer[0]+1;													// Index einlesen und um 1 erhöhen
 			if ($index > $this->ReadPropertyInteger("amount")) $index = 1;			// Überlauf
 			$buffer[0] = 0;
