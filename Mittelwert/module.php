@@ -33,11 +33,11 @@
 		{
 			if ($this->ReadPropertyBoolean("Visible"))
 			{
-				$this->UpdateFormField("amount", "visible", 1);
+				$this->UpdateFormField("TargetVariable", "visible", true);
 				$this->SendDebug("Test","Its true",0);
 			} else
 			{
-				$this->UpdateFormField("amount", "visible", 0);
+				$this->UpdateFormField("TargetVariable", "visible", false);
 				$this->SendDebug("Test","Its false",0);
 			}
 		}
