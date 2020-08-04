@@ -29,7 +29,7 @@
 			ChangeVisible();
 		}
 
-		public function ChangeVisible
+		public function ChangeVisible()
 		{
 			if ($this->ReadPropertyBoolean("Visible"))
 			{
