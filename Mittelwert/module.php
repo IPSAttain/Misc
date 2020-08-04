@@ -26,7 +26,7 @@
 			$this->RegisterMessage($this->ReadPropertyInteger("SourceVariable"), 10603  /* VM_UPDATE */);
 			$this->SetBuffer("DataBuffer", "");
 			$this->SetBuffer("Index", 0);
-			ChangeVisible();
+			$this->ChangeVisible();
 		}
 
 		private function ChangeVisible()
