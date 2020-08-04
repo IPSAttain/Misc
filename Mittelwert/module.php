@@ -26,7 +26,13 @@
 			$this->RegisterMessage($this->ReadPropertyInteger("SourceVariable"), 10603  /* VM_UPDATE */);
 			$this->SetBuffer("DataBuffer", "");
 			$this->SetBuffer("Index", 0);
-			$this->UpdateFormField("amount", "visible", $this->ReadPropertyBoolean("Visible"));
+			if ($this->ReadPropertyBoolean("Visible"))
+			{
+				$this->UpdateFormField("amount", "visible", true);
+			} else
+			{
+				$this->UpdateFormField("amount", "visible", false);
+			}
 		}
 
 		public function MessageSink($TimeStamp, $SenderID, $Message, $Data) 

@@ -3,7 +3,7 @@
         { "type": "SelectVariable", "name": "SourceVariable", "caption": "Source Variable" },
         { "type": "SelectVariable", "name": "TargetVariable", "caption": "Target Variable" },
         { "type": "CheckBox", "name": "Visible", "caption": "Sichtbar"},
-        { "type": "NumberSpinner", "name": "amount", "caption": "Number of Values", "visible": false }
+        { "type": "NumberSpinner", "name": "amount", "caption": "Number of Values", "visible": true }
     ],
     "actions": [],
     "status": []
