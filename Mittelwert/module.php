@@ -34,7 +34,7 @@
 			if ($this->ReadPropertyBoolean("Visible"))
 			{
 				$this->UpdateFormField("amount", "visible", true);
-				
+				$this->SendDebug("Test","Its true",0);
 			} else
 			{
 				$this->UpdateFormField("amount", "visible", false);
