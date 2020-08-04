@@ -26,6 +26,7 @@
 			$this->RegisterMessage($this->ReadPropertyInteger("SourceVariable"), 10603  /* VM_UPDATE */);
 			$this->SetBuffer("DataBuffer", "");
 			$this->SetBuffer("Index", 0);
+			$this->UpdateFormField("amount", "visible", $this->ReadPropertyBoolean("Visible"));
 		}
 
 		public function MessageSink($TimeStamp, $SenderID, $Message, $Data) 
@@ -33,7 +34,7 @@
 			$buffer = explode("|",str_replace(',' , '.',$this->GetBuffer("DataBuffer"))); 
 			$index = $this->GetBuffer("Index"); 
 			if($index >= $this->ReadPropertyInteger("amount")) $index = 0;			// overflow
-			
+
 			$buffer[$index] = floatval(str_replace(',' , '.',$Data[0]));			// add new value
 			$average = array_sum($buffer) / count($buffer);							// calculate
 			$this->SetBuffer("DataBuffer", implode("|",$buffer));					// array to string to buffer
