@@ -34,9 +34,11 @@
 			if ($this->ReadPropertyBoolean("Visible"))
 			{
 				$this->UpdateFormField("amount", "visible", true);
+				
 			} else
 			{
 				$this->UpdateFormField("amount", "visible", false);
+				$this->SendDebug("Test","Its false",0);
 			}
 		}
 		public function MessageSink($TimeStamp, $SenderID, $Message, $Data) 
