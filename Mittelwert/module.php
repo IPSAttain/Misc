@@ -6,7 +6,7 @@
 			//Never delete this line!
 			parent::Create();
 
-			// test
+			// test 2
 			
 			$this->RegisterPropertyInteger("SourceVariable", 0);
 			$this->RegisterPropertyInteger("TargetVariable", 0);
