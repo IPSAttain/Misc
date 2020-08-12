@@ -32,8 +32,17 @@
 		private function TestVis($visible)
 		{
 			$this->UpdateFormField("amount", "visible", $visible);
-			$this->ReloadForm();
-			$this->SendDebug("Test","Its true",0);
+			if $visible
+			{
+				$this->UpdateFormField("Button", "caption", "AN");
+				$this->SendDebug("Test","Its true",0);
+			} else {
+				$this->UpdateFormField("Button", "caption", "AUS");
+				$this->SendDebug("Test","Its false",0);
+			}
+			
+			//$this->ReloadForm();
+			
 		}
 
 	}
