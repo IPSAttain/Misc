@@ -29,7 +29,7 @@
 			$this->Tests($visible);
 		}
 
-		private function Test($visible)
+		private function Tests($visible)
 		{
 			$this->UpdateFormField("amount", "visible", $visible);
 			$this->ReloadForm();
