@@ -32,7 +32,7 @@
 		private function TestVis($visible)
 		{
 			$this->UpdateFormField("amount", "visible", $visible);
-			if $visible
+			if ($visible)
 			{
 				$this->UpdateFormField("Button", "caption", "AN");
 				$this->SendDebug("Test","Its true",0);
