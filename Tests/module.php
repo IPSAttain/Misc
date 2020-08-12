@@ -26,7 +26,7 @@
 			parent::ApplyChanges();
 
 			$visible = $this->ReadPropertyBoolean("Visible");
-			$this->ChangeVisible($visible);
+			$this->Tests($visible);
 		}
 
 		private function Test($visible)
