@@ -1,7 +1,7 @@
 {
     "elements": [
         { "type": "SelectVariable", "name": "SourceVariable", "caption": "Source Variable" },
-        { "type": "Button", "caption": "An", "onClick": "echo $id;","name": "Button", "visible": true },
+        { "type": "Button", "onClick": "echo $id;","name": "Button", "visible": true },
         { "type": "SelectVariable", "name": "TargetVariable", "caption": "Target Variable", "visible": true },
         { "type": "CheckBox", "name": "Visible", "caption": "Sichtbar"},
         { "type": "NumberSpinner", "name": "amount", "caption": "Number of Values", "visible": true}
