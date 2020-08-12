@@ -35,10 +35,12 @@
 			if ($visible)
 			{
 				$this->UpdateFormField("Button", "caption", "AN");
+				$this->UpdateFormField("DeviceName", "caption", "AN");
 				$this->SendDebug("Test","Its true",0);
 			} else {
 				$this->UpdateFormField("Button", "caption", "AUS");
 				$this->SendDebug("Test","Its false",0);
+				$this->UpdateFormField("DeviceName", "caption", "AUS");
 			}
 			
 			//$this->ReloadForm();

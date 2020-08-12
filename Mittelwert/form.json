@@ -4,7 +4,8 @@
         { "type": "Button", "onClick": "echo $id;","name": "Button", "visible": true },
         { "type": "SelectVariable", "name": "TargetVariable", "caption": "Target Variable", "visible": true },
         { "type": "CheckBox", "name": "Visible", "caption": "Sichtbar"},
-        { "type": "NumberSpinner", "name": "amount", "caption": "Number of Values", "visible": true}
+        { "type": "NumberSpinner", "name": "amount", "caption": "Number of Values", "visible": true},
+        { "type": "Label", "name": "DeviceName", "caption": "none"}
     ],
     "actions": [],
     "status": []
