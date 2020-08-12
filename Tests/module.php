@@ -25,8 +25,8 @@
 			//Never delete this line!
 			parent::ApplyChanges();
 
-			$visible = $this->ReadPropertyBoolean("Visible");
-			$this->TestVis($visible);
+			//$visible = $this->ReadPropertyBoolean("Visible");
+			//$this->TestVis($visible);
 		}
 
 		private function TestVis($visible)
@@ -45,6 +45,11 @@
 			
 			//$this->ReloadForm();
 			
+		}
+		public function ATN() 
+		{
+			$visible = $this->ReadPropertyBoolean("Visible");
+			$this->TestVis($visible);
 		}
 
 	}
