@@ -1,0 +1,9 @@
+{
+    "translations": {
+        "de": {
+            "Source Variable": "Quell Variable",
+            "Target Variable": "Ziel Variable",
+            "Number of Values": "Werteanzahl"
+        }
+    }
+}
