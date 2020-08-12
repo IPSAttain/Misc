@@ -26,10 +26,10 @@
 			parent::ApplyChanges();
 
 			$visible = $this->ReadPropertyBoolean("Visible");
-			$this->Tests($visible);
+			$this->TestVis($visible);
 		}
 
-		private function Tests($visible)
+		private function TestVis($visible)
 		{
 			$this->UpdateFormField("amount", "visible", $visible);
 			$this->ReloadForm();
