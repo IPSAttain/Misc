@@ -4,7 +4,8 @@
         { "type": "Button", "caption": "An", "onClick": "ATN_ATN($id);","name": "Button", "visible": true },
         { "type": "SelectVariable", "name": "TargetVariable", "caption": "Target Variable", "visible": true },
         { "type": "CheckBox", "name": "Visible", "caption": "Sichtbar"},
-        { "type": "NumberSpinner", "name": "amount", "caption": "Number of Values", "visible": true},
+        { "name": "DeviceType", "type": "ValidationTextBox", "caption": "Device Type:", "enabled": false, "value": "ZHASwitch"},
+        { "type": "NumberSpinner", "name": "amount", "caption": "Number of Values", "visible": "$this->ReadPropertyString(DeviceType)=='ZHASwitch'"},
         { "type": "Label", "name": "DeviceName", "caption": "none" }
     ],
     "actions": [],

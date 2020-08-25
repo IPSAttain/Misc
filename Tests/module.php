@@ -10,6 +10,7 @@
 			
 			$this->RegisterPropertyInteger("SourceVariable", 0);
 			$this->RegisterPropertyInteger("TargetVariable", 0);
+			$this->RegisterPropertyString("DeviceType","ZHASwitch");
 			$this->RegisterPropertyInteger("amount", 0);
 			$this->RegisterPropertyBoolean("Visible", 0);
 		}
